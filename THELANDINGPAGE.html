@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+
+<style>
+    body{
+        color:white;
+        margin-top:15px;
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .header-info{
+        height:50px;
+        width:auto;
+        background-color:rgb(229, 103, 124) ;
+        padding: 20px;
+
+    }
+
+    .logo img {
+        float: left;
+        height:80px;
+        width:80px;
+        margin-right: 20px;
+    }
+
+    .header-info img{
+        float: right;
+        height:40px;
+        width:40px;
+        margin-left: 10px;
+    }
+
+    .container{
+        background: linear-gradient(45deg, pink 30% , rgb(229, 103, 124)50%, rgb(209, 89, 109) 10%);
+        height:776px;
+        width:auto;
+    }
+
+    .header{
+        width:auto;
+        height:60px;
+        background-color:rgb(242, 242, 116);
+        border: 1px solid rgb(242, 242, 116);
+        border-radius: 25px;
+        margin:40px;
+        margin-top: 20px;
+    }
+
+    .header li{
+        display: inline;           
+        text-decoration: none;
+        margin : 0px, 16px;
+        color:black;
+        padding: 20px;
+    }  
+        
+    .header li:hover{
+        text-decoration: underline;
+        background-color:yellowgreen;
+        background-blend-mode: color;
+    }
+
+    .header li a:visited{
+        color:black;
+    }
+
+    .left {
+        float: left;
+    }
+
+    .left img {
+        align-self: center;
+        padding-top: 60px;
+        padding-left: 120px;
+        border-image: 2px solid rgb(193, 53, 76);
+        animation-name: reading;
+        animation-duration: 1s;
+    }
+
+    @keyframes reading{
+            0%{
+                width:0
+            }
+            100%{
+                width:150px;
+            }
+    }
+
+    .left h2{
+        color:rgb(205, 17, 48);
+        padding-left: 100px;
+        font-size: 32px; 
+
+    }
+
+    .left h4 ul{
+        color:rgb(193, 53, 76);
+        font-size: 28px;
+        padding-left: 100px;
+    }
+
+    .left h1{
+        font-size: 30px;
+        margin-left: 10px;
+        position: relative;
+        color:rgb(193, 53, 76);
+        animation-name:fadeln;
+        animation-duration: 2s;
+    }
+
+    @keyframes fadeln {
+    0% {
+        left:0;
+    }
+    50% {
+        left:20%;
+    }
+    100% {
+        left:0; 
+    }
+}
+
+.right{
+    float:right
+}
+
+.box {
+    color:rgb(209, 89, 109);
+    box-shadow: 30px 30px 30px black;
+    height:320px;
+    width:300px;
+    margin-right:160px;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+.box img {
+    position: absolute; 
+    top: 20px; 
+    right: 20px; 
+    height: 320px;
+    width: 340px;
+    overflow: hidden;
+}
+
+.btn1{
+    background: linear-gradient(45deg, rgb(67, 181, 226) 40% ,rgb(3,131, 93) 60%);
+    padding-top: 00px;
+}
+
+.btn1{
+    display: block;
+    width: 150px; 
+    height:60px;
+    margin-top: 30px;
+    padding:20, 20;
+    padding-top: 20px;
+    background-color: rgb(209, 89, 109);
+    color: white;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+
+.about-us {
+    width:650px;
+    height: 400px; 
+    margin: 30px;
+    margin-left: 350px;
+    padding: 25px;
+    border: 2px solid rgb(193, 53, 76);
+    border-radius: 20px;
+}
+
+.about-us h2{
+    text-align:center;
+    color: rgb(193, 53, 76);
+    text-decoration: underline;
+    font-size: 26px;
+}
+
+.content-container {
+    display: flex;
+    align-items: center; 
+    gap: 20px; 
+}
+
+.content-container img {
+    max-width: 50%; 
+    height: 350px;
+    border-radius: 10px;
+}
+
+.text-container {
+    max-width: 50%; 
+}
+
+.text-container h3 {
+    font-size:20px;
+    margin: 0;
+    text-align: left; 
+    color:rgb(193, 53, 76);
+}
+
+.book-categories {
+    background: linear-gradient(45deg, pink 30% , rgb(229, 103, 124)50%, rgb(209, 89, 109) 10%);
+    width:auto;
+    margin: 30px;
+    padding: 25px;
+
+}
+
+.book-categories h2{
+    color:rgb(193, 53, 76);
+    font-size: 26px;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.book-category {
+    display: flex;
+    justify-content: space-around; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+}
+
+.book-category h3{
+    color:rgb(193, 53, 76);
+}
+
+.category-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    max-width: 150px; 
+    text-align: center;
+}
+
+.category-item img {
+    max-width: 100%; 
+    height: auto;
+    border-radius: 10px;
+}
+
+.category-item img:hover {
+    transform: scale(1.1); 
+}
+
+.featured-authors{
+    height:440px;
+    width:630px;
+    border:1px solid rgb(193, 53, 76);
+    border-radius: 20px;
+    margin-left: 350px;
+    padding: 25px;
+
+}
+
+.featured-authors img {
+    height:320px;
+    width:250px;
+    margin-left: 20px;
+}
+
+.featured-authors h4{
+    color:rgb(193, 53, 76);
+    overflow: hidden;
+}
+
+.featured-authors h3{
+    color:rgb(193, 53, 76);
+    text-align: center;
+    font-size: 26px;
+}
+
+.container2{
+    color:white;
+    margin:10px;
+    border:1px solid black;
+    padding: 20px;
+    background-color:rgb(209, 89, 109);
+}
+
+
+
+.box1{
+    margin: 10px;
+    border: 2px solid greenyellow;
+    border-radius: 15px;
+    padding: 15px;
+
+}
+
+.righty{
+    flex:1;
+    margin-top: 10px;
+    margin-left:380px;
+    background-color:white;
+    text-align: left;
+    padding: 20px;
+    border-radius: 10px;
+    width:450px;
+    height:250px;
+    border: 2px solid rgb(209, 89, 109);           
+}
+
+
+.form-group {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     margin-bottom: 10px;
+     width: 100%;
+}
+
+.form-group label {
+      min-width: 100px;
+      margin-right: 10px;
+      color:rgb(209, 89, 109);
+}
+.form-group input {
+    flex-grow: 1;
+    padding: 5px;
+}
+    
+.btn2{
+margin-top: 10px;
+padding:10px 20px;
+align-self: flex-end;
+background-color: rgb(209, 89, 109);
+}
+
+.footer{
+margin-top: 15px;
+padding: 1rem 2rem;
+background: linear-gradient(45deg, pink 30% , rgb(229, 103, 124)50%, rgb(209, 89, 109) 10%);
+color: #fff;
+text-align: center;
+}
+
+.footer .footer-info {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+</style>    
+</head>
+<body>
+    <div class="container" id="CONTAINER">
+          <div class="logo">
+            <img src="landing page assets\IMG-20240708-WA0004-removebg-preview.png" alt="ERROR LOADING IMAGE">
+          </div> 
+          <div class="header-info"> 
+         <img src="landing page assets\IMG-20240704-WA0002-removebg-preview.png" alt="error loading image">
+         <img src="landing page assets\download (1).png" alt="ERROR LOADING IMAGE">
+         <img src="landing page assets\IMG-20240704-WA0001-removebg-preview.png" alt="ERROR LOADING IMAGE">
+         </div>
+        <div class="header">
+            <ul>
+                <li><a href="#ABOUTUS">About us</a></li>
+                <li><a href="#bookcategories">Book categories</a></li>
+                <li><a href="#authors">Featured Authors</a></li>
+                <li><a href="#FAQS">FAQs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="left">
+            <h1>Want to impress a cute stranger</h1>
+            <h1>with your book choice?</h1>
+            <img src="landing page assets\logo.png" alt="ERROR LOADING IMAGE">
+            <h2>Welcome to THE READING ROOM!</h2>
+            <h4>
+                <ul>
+                    <li>You can purchase or sell books</li>
+                    <li>Online talk with famous writers</li>
+                    <li>Can connect your friends</li>
+                </ul>
+            </h4>
+        </div>
+
+        <div class="right">
+            <div class="box">
+            <img src="landing page assets\pls.jpg" alt="ERROR LOADING IMAGE">
+         </div>
+         <div>
+            <button class="btn1">DISCOVER NOW</button>
+
+        </div>
+        </div>
+    </div>
+
+    <div class="about-us" id="ABOUTUS">
+        <h2>ABOUT US:</h2>
+        <div class="content-container">
+            <img src="landing page assets\try.jpeg" alt="ERROR LOADING IMAGE">
+            <div class="text-container">
+                <h3>Welcome to our online library! Our platform is dedicated to providing a vast collection of digital resources for all your reading needs. From classic literature to modern bestsellers, we aim to cater to a wide range of interests and preferences. Our virtual shelves are stocked with e-books, audiobooks, academic journals, and much more, ensuring that there is something for everyone. Explore, discover, and immerse yourself in the world of words with us!</h3>
+            </div>
+        </div>
+    </div>
+    
+    <div class="book-categories" id="bookcategories">
+        <h2>BOOK CATEGORIES</h2>
+        <div class="book-category">
+            <div class="category-item">
+                <h3>FICTION</h3>
+                <img src="landing page assets/english-fiction-books.jpg" alt="ERROR LOADING IMAGE">
+            </div>
+            <div class="category-item">
+                <h3>NON-FICTION</h3>
+                <img src="landing page assets\downloadDD.jpeg" alt="ERROR LOADING IMAGE">
+            </div>
+            <div class="category-item">
+                <h3>SCIENCE</h3>
+                <img src="landing page assets\science.jpeg" alt="ERROR LOADING IMAGE">
+            </div>
+            <div class="category-item">
+                <h3>BIOGRAPHY</h3>
+                <img src="landing page assets\download33.jpeg" alt="ERROR LOADING IMAGE">
+            </div>
+            <div class="category-item">
+                <h3>ROMANCE</h3>
+                <img src="landing page assets\44.jpeg" alt="ERROR LOADING IMAGE">
+            </div>
+        </div>
+    </div>
+
+    <div class="featured-authors" id="authors">
+        <h3>Who is your fav author?</h3>
+        <img src="landing page assets\chetan.webp" alt="error loading image"> 
+        <img src="landing page assets\images.jpeg" alt="error loading images">
+
+    <h4>LIVE SESSIONS WITH CHETAN BHAGAT, ARUNDHATI ROY AND OTHER FAMOUS WRITERS.</h4>
+    </div>
+
+    <div class="container2" id="FAQS">
+        <div class="box1">
+            <h2>Frequently Asked Questions</h2>
+            <h3>How can I borrow an item which is currently checked out to another member?</h3>
+            <h4>One needs to 'reserve' the book by filling up the appropriate information available online at the Circulation Desk. Same can be done online by the user him/herself. The book will be issued to you on its return.</h4>
+        
+            <h3>Why are online libraries better?</h3>
+            <h4>Digital libraries provide students with easy access to an extensive collection of books, articles, multimedia, and educational resources.</h4>
+    
+            <h3>Do you also list journals, magazines or newspapers?</h3>
+            <h4>Yes, we do.</h4>
+       
+        </div>
+    </div>
+
+
+        <div class = "righty" id="contact">
+            <div class="form-group">
+                <label for="First Name">FIRST NAME:</label>
+                <input type="text" id="Name" name="MY FIRST NAME">
+            </div>
+            <div class="form-group">
+                <label for="Last Name">LAST NAME:</label>
+                <input type="text" id="name" name="MY LAST NAME">
+            </div>
+            <div class = "form-group">
+                <label for="phone">PHONE:</label>
+                <input type="text" id="phone" name="number">
+                
+            </div>
+            <div class="form-group">
+                <label for="address">ADDRESS:</label>
+                <input type="text" id="address" name="myaddress">
+            </div>
+            <div class="form-group">
+                <label for="email">EMAIL:</label>
+                <input type="text" id="email" name="myemail">
+            </div>
+            <div>
+            <button class="btn2"> REGISTER NOW</button>
+            </div>
+            </div>
+        </div> 
+        
+        
+        <footer class="footer" id="contact">
+            <div class="footer-info">
+                <p>Contact us: info@readingroom.com</p>
+                <p>Email: readingroom183@gmail.com</p>
+                <p>&copy;  THE READING ROOM!, 2024. All Rights Reserved.</p>
+
+            </div>
+        </footer>             
+    
+         
+    
+</body>
+</html>
